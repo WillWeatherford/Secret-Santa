@@ -58,17 +58,10 @@ while names:
     names.remove(recip)
     chain.append(recip)
 
-print(chain)
-print(len(chain))
-
 santas = {}
 for indx, santa in enumerate(chain):
     recipient = chain[indx - 1]
     print(' --> '.join((santa, recipient)))
     santas[santa] = recipient
-
-
-print(santas)
-print(len(santas))
 
 test_santas(santas, families)
